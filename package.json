@@ -1,6 +1,6 @@
 {
   "name": "docker-prerender",
-  "version": "1",
+  "version": "0.0.1",
   "description": "Dockerfile to build the prerender container image",
   "main": "server.js",
   "dependencies": {
