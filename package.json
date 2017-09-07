@@ -1,0 +1,16 @@
+{
+  "name": "docker-prerender",
+  "version": "1",
+  "description": "Dockerfile to build the prerender container image",
+  "main": "server.js",
+  "dependencies": {
+    "prerender-redis-cache": "^0.1.6",
+    "html-minifier": "^3.5.3",
+    "prerender": "4.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
