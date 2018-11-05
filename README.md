@@ -5,6 +5,7 @@
 - JS_TIMEOUT
 - PAGE_TTL
 - REDIS_URL
+- REMOVE_SCRIPT_TAGS
 
 ## Build:
 - `docker build -t registry.rademade.com/prerender:v1 .`

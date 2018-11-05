@@ -4,6 +4,8 @@ const forwardHeaders = require('./forwardHeaders');
 const stripHtml = require('./stripHtml');
 const healthcheck = require('./healthcheck');
 
+const removeScriptTags = process.env.REMOVE_SCRIPT_TAGS || 'true';
+
 const options = {
 	workers : process.env.PRERENDER_NUM_WORKERS || 2,
 	iterations : process.env.PRERENDER_NUM_ITERATIONS || 25,
@@ -19,7 +21,11 @@ server.use(redisCache);
 server.use(healthcheck('_health'));
 server.use(forwardHeaders);
 server.use(prerender.sendPrerenderHeader());
-server.use(prerender.removeScriptTags());
+
+if (removeScriptTags === 'true') {
+	server.use(prerender.removeScriptTags());
+} 
+
 server.use(prerender.httpHeaders());
 if (process.env.DEBUG_PAGES) {
 	server.use(prerender.logger());
