@@ -4,7 +4,7 @@ const forwardHeaders = require('./forwardHeaders');
 const stripHtml = require('./stripHtml');
 const healthcheck = require('./healthcheck');
 
-const removeScriptTags = process.env.REMOVE_SCRIPT_TAGS || 'true';
+const removeScriptTags = process.env.REMOVE_SCRIPT_TAGS;
 
 const options = {
 	workers : process.env.PRERENDER_NUM_WORKERS || 2,
