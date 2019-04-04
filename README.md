@@ -8,6 +8,5 @@
 - REMOVE_SCRIPT_TAGS
 
 ## Build:
-- `docker build -t registry.demo-rademade.com/prerender:v1 .`
-- `docker login -u $USER registry.rademade.com`
-- `docker push registry.demo-rademade.com/prerender:v1`
+- `docker build -t registry-jj.demo-rademade.com/prerender:v1 .`
+- `docker push registry-jj.demo-rademade.com/prerender:v1`
